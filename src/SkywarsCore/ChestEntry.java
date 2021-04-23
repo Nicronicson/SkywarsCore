@@ -11,10 +11,7 @@ public class ChestEntry {
     protected int chance;
     protected int middleChance;
 
-    public ChestEntry() {
-    }
-
-    public void setAll(ItemStack item, Map<String, Integer> itemENC, int chance, int middleChance){
+    public ChestEntry(ItemStack item, Map<String, Integer> itemENC, int chance, int middleChance) {
         this.item = item;
         this.itemENC = itemENC;
         this.chance = chance;
