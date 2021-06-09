@@ -8,7 +8,7 @@ public class ChestEntry {
     protected ItemStack item;
     protected Map<String, Integer> itemENC;
 
-    public ChestEntry(ItemStack item, Map<String, Integer> itemENC, int chance, int middleChance) {
+    public ChestEntry(ItemStack item, Map<String, Integer> itemENC) {
         this.item = item;
         this.itemENC = itemENC;
     }
