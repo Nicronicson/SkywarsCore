@@ -6,6 +6,7 @@ import java.util.List;
 
 public class Map {
     protected String mapname;
+    protected int teamsize;
     protected Location middle;
     protected Location pos1;
     protected Location pos2;
@@ -16,12 +17,21 @@ public class Map {
 
     public Map(String mapname){
         this.mapname = mapname;
+        teamsize = 0;
         this.middle = null;
         this.pos1 = null;
         this.pos2 = null;
         this.spawnpoints = new ArrayList<>();
         this.chests = new ArrayList<>();
         this.middleChests = new ArrayList<>();
+    }
+
+    public int getTeamsize() {
+        return teamsize;
+    }
+
+    public void setTeamsize(int teamsize) {
+        this.teamsize = teamsize;
     }
 
     public void setMapname(String mapname) {

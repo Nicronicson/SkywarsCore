@@ -5,6 +5,9 @@ import java.util.ArrayList;
 import java.util.Map;
 
 public class Kit {
+    protected String name;
+    protected ItemStack visual;
+
     protected ItemStack leftHand;
     protected Map<String, Integer> leftHandENC;
 
@@ -20,7 +23,8 @@ public class Kit {
     protected ItemStack[] inventory;
     protected ArrayList<Map<String, Integer>> inventoryENC;
 
-    public Kit(ItemStack leftHand, Map<String, Integer> leftHandENC, ItemStack helmet, Map<String, Integer> helmetENC, ItemStack chestplate, Map<String, Integer> chestplateENC, ItemStack leggings, Map<String, Integer> leggingsENC, ItemStack boots, Map<String, Integer> bootsENC, ItemStack[] inventory, ArrayList<Map<String, Integer>> inventoryENC) {
+    public Kit(String name, ItemStack leftHand, Map<String, Integer> leftHandENC, ItemStack helmet, Map<String, Integer> helmetENC, ItemStack chestplate, Map<String, Integer> chestplateENC, ItemStack leggings, Map<String, Integer> leggingsENC, ItemStack boots, Map<String, Integer> bootsENC, ItemStack[] inventory, ArrayList<Map<String, Integer>> inventoryENC, ItemStack visual) {
+        this.name = name;
         this.leftHand = leftHand;
         this.leftHandENC = leftHandENC;
         this.helmet = helmet;
@@ -33,6 +37,11 @@ public class Kit {
         this.bootsENC = bootsENC;
         this.inventory = inventory;
         this.inventoryENC = inventoryENC;
+        this.visual = visual;
+    }
+
+    public Kit(){
+
     }
 
     public ItemStack getLeftHand() {
@@ -129,5 +138,21 @@ public class Kit {
 
     public void setInventoryENC(ArrayList<Map<String, Integer>> inventoryENC) {
         this.inventoryENC = inventoryENC;
+    }
+
+    public ItemStack getVisual() {
+        return visual;
+    }
+
+    public void setVisual(ItemStack visual) {
+        this.visual = visual;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
